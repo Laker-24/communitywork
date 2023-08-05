@@ -4,6 +4,7 @@ import 'package:work/http/MyDio.dart';
 import 'package:work/page/forgetpwdpage.dart';
 import 'package:work/page/loginpage.dart';
 import 'package:work/page/registerpage.dart';
+import 'package:work/page/searchpage.dart';
 import 'package:work/page/verifypage.dart';
 import 'const/pageconst.dart';
 import 'model/TelResponse.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         PageConst.register: (context) => registerpage(),
         PageConst.verify: (context) => verifypage(),
         PageConst.fpwd:(context) => forgetpwdpage(),
+        PageConst.Search:(context) => Searchpage(),
         // "/": (context) => MyHomePage(title: 'Flutter Demo Home Page'),
       },
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),

@@ -3,4 +3,5 @@ class PageConst {
   static const register = "registerpage";
   static const verify = "verifypage";
   static const fpwd = "forgetpwdpage";
+  static const Search = "searchpage";
 }
