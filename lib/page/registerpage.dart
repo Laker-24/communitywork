@@ -28,7 +28,7 @@ class _registerpageState extends State<registerpage> {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              'https://ts1.cn.mm.bing.net/th/id/R-C.a925111784ff9d0b59179f17e944fad1?rik=hfYgQuiP591YkA&riu=http%3a%2f%2fimg.zcool.cn%2fcommunity%2f01b0495549931e0000019ae9d322d6.jpg&ehk=Bsl1e9pMdn4zaKuD8VHwEOXjGPKTnR2jqO1YUrXU9Ys%3d&risl=&pid=ImgRaw&r=0'),
+              'https://pic4.zhimg.com/v2-affd6b88da47f8647b430c2040dd3123_r.jpg?source=1940ef5c'),
           fit: BoxFit.cover,
         ),
       ),
