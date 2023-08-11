@@ -5,7 +5,8 @@ class MyDio {
 
   MyDio() {
     BaseOptions options = BaseOptions(
-      baseUrl: 'https://api.oioweb.cn/api/common', // 设置接口的基本URL
+      // baseUrl: 'https://api.oioweb.cn/api/common', // 设置接口的基本URL
+      baseUrl: 'https://yapi.pro/mock/42579',
       connectTimeout: Duration(milliseconds: 5000), // 设置连接超时时间
       receiveTimeout: Duration(milliseconds: 3000), // 设置接收超时时间
     );
@@ -38,7 +39,7 @@ class MyDio {
   }
 
   Future<Response> get(String path,
-      {Map<String, dynamic>? queryParameters, Options? options}) async {
+      {Map<String, dynamic>? queryParameters,Options? options}) async {
     try {
       Response response = await _dio.get(path,
           queryParameters: queryParameters, options: options);

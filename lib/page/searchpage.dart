@@ -1,5 +1,9 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:work/model/PostResponse.dart';
+
+import '../http/MyDio.dart';
 
 class Searchpage extends StatefulWidget {
   @override
@@ -7,6 +11,18 @@ class Searchpage extends StatefulWidget {
 }
 
 class _SearchpageState extends State<Searchpage> {
+  MyDio myDio = MyDio();
+  Future getData() async {
+    try {
+      Response response =
+          await myDio.get("https://yapi.pro/mock/42579/showPublishedPost");
+      print(response.data);
+      PostResponse postResponse = PostResponse.fromJson(response.data);
+    } catch (error) {
+      print("请求失败");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget divider1 = Divider(
