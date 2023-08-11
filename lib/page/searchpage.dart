@@ -14,13 +14,17 @@ class _SearchpageState extends State<Searchpage> {
     );
     Widget divider2 = Divider(color: Colors.green);
     return Scaffold(
+      appBar: AppBar(
+        title: Text("全部帖子"),
+        centerTitle: true,
+      ),
       body: Center(
           child: Column(
         children: <Widget>[
           ListView.separated(
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
-            itemCount: 100,
+            itemCount: 8,
             itemBuilder: (BuildContext context, int index) {
               return ListTile(title: Text("$index"));
             },
