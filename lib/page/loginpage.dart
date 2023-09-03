@@ -108,7 +108,7 @@ class _loginpageState extends State<loginpage> {
                       child: ElevatedButton(
                         child: Text("登录"),
                         onPressed: () {
-                          Navigator.pushNamed(context, PageConst.Search);
+                          Navigator.pushNamed(context, PageConst.Home);
                         },
                       ))
                 ],

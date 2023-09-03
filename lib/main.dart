@@ -2,14 +2,19 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:work/http/MyDio.dart';
 import 'package:work/page/forgetpwdpage.dart';
+import 'package:work/page/homepage.dart';
 import 'package:work/page/loginpage.dart';
+import 'package:work/page/minepage.dart';
+import 'package:work/page/postdetail.dart';
+import 'package:work/page/publicpage.dart';
 import 'package:work/page/registerpage.dart';
+import 'package:work/page/searchdetail.dart';
 import 'package:work/page/searchpage.dart';
 import 'package:work/page/verifypage.dart';
 import 'const/pageconst.dart';
 import 'model/TelResponse.dart';
 
-void main() {
+void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
   // await BaseCache.preInit();
   runApp(const MyApp());
@@ -31,8 +36,14 @@ class MyApp extends StatelessWidget {
         PageConst.login: (context) => loginpage(),
         PageConst.register: (context) => registerpage(),
         PageConst.verify: (context) => verifypage(),
-        PageConst.fpwd:(context) => forgetpwdpage(),
-        PageConst.Search:(context) => Searchpage(),
+        PageConst.fpwd: (context) => forgetpwdpage(),
+        PageConst.Search: (context) => Searchpage(),
+        PageConst.Home: ((context) => Homepage()),
+        PageConst.Sd:(context) => SearchDetail(),
+        PageConst.mine:(context) => MinePage(),
+        PageConst.public:(context) => PublicPage(),
+        PageConst.post:(context) => PostDetail(),
+
         // "/": (context) => MyHomePage(title: 'Flutter Demo Home Page'),
       },
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
