@@ -43,14 +43,31 @@ class _PostDetailState extends State<PostDetail> {
       body: Column(
         children: [
           Container(
-              height: 50,
+            height: 50,
             //  color: Colors.amber,
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    title0.toString(),
-                    style: TextStyle(fontSize: 25),
-                  ))),
+            child: Row(
+              children: [
+                Container(
+                  width: 150,
+                ),
+                Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      title0.toString(),
+                      style: TextStyle(fontSize: 25),
+                    )),
+                Container(
+                  width: 90,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(labelContent0.toString()),
+                  ),
+                ),
+              ],
+            ),
+          ),
           Container(
               height: 25,
 //       color: Colors.red,
@@ -61,25 +78,58 @@ class _PostDetailState extends State<PostDetail> {
                   ),
                   Align(
                     alignment: Alignment.centerRight,
-                    child: Text(postTime0.toString()),
+                    child: Container(
+                      color: Color.fromARGB(255, 158, 229, 195),
+                      child: Text(postTime0.toString()),
+                    ),
                   ),
                   Container(
                     width: 180,
                   ),
-                  Text(userName0.toString())
+                  Container(
+                      color: Color.fromARGB(255, 158, 229, 195),
+                      child: Text(userName0.toString()))
                 ],
               )),
           Container(
-            height:420,
+            height: 420,
 //color: Colors.amber,
+            child: Column(
+              children: [
+                Text(
+                  "悄悄是别离的笙箫",
+                  style: TextStyle(fontSize: 25),
+                ),
+                Text(
+                  "夏虫也为我沉默",
+                  style: TextStyle(fontSize: 25),
+                ),
+                Text(
+                  "沉默是今晚的康桥",
+                  style: TextStyle(fontSize: 25),
+                ),
+              ],
+            ),
           ),
+          //评论区
           Container(
-            height: 25,
-            width: MediaQuery.of(context).size.width,
-            //color: Colors.black,
-            child: Row(children: [Text("评论区",style: TextStyle(fontSize: 20),),
-            Icon(Icons.mode_edit)],
-          ))
+              height: 25,
+              width: MediaQuery.of(context).size.width,
+              //color: Colors.black,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "评论区",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Icon(Icons.mode_edit)
+                ],
+              )),
+          Container(
+            height: 47.4,
+            color: Color.fromARGB(255, 233, 231, 231),
+          )
         ],
       ),
       bottomNavigationBar: Row(
